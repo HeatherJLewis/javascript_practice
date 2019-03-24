@@ -11,21 +11,27 @@ console.log(capitalize("the quick fox."));
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
   if (lastName === undefined) throw new Error("lastName is required");
-  // Add your code here!
+  let firstInitial = firstName.slice(0,1);
+  let lastInitial = lastName.slice(0,1);
+return (`${firstInitial}.${lastInitial}`)
 }
 
 function addVAT(originalPrice, vatRate) {
   if (originalPrice === undefined) throw new Error("originalPrice is requied");
   if (vatRate === undefined) throw new Error("vatRate is required");
-  let multiplier = (vatRate/100)+1;
-  return originalPrice * multiplier;
+  let multiplier = (vatRate+100)/100;
+  let salePrice = originalPrice * multiplier;
+  return +salePrice.toFixed(2);
 }
 
 function getSalePrice(originalPrice, reduction) {
   if (originalPrice === undefined) throw new Error("originalPrice is required");
   if (reduction === undefined) throw new Error("reduction is required");
-  // Add your code here!
+  let multiplier = (100-reduction)/100;
+  console.log(multiplier);
+  return (+(originalPrice * multiplier).toFixed(2));
 }
+ console.log(getSalePrice(50, 0));
 
 function getMiddleCharacter(str) {
   if (str === undefined) throw new Error("str is required");
