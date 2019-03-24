@@ -1,7 +1,12 @@
 function capitalize(word) {
   if (word === undefined) throw new Error("word is required");
-  // Add your code here!
+  // let firstLetterOfWord = word.slice(0,1);
+  // capitalLetter = firstLetterOfWord.toUpperCase();
+  let capitalLetter = (word.slice(0,1).toUpperCase());
+  let endOfWord = word.slice(1, word.length)
+  return (capitalLetter+endOfWord);
 }
+console.log(capitalize("the quick fox."));
 
 function generateInitials(firstName, lastName) {
   if (firstName === undefined) throw new Error("firstName is required");
