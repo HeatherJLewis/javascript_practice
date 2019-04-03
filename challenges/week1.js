@@ -108,3 +108,10 @@ module.exports = {
   getMeanScore,
   simpleFizzBuzz
 };
+
+
+function removeVowels(str) {
+return str;
+};
+
+removeVowels("candy");
